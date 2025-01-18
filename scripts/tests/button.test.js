@@ -4,6 +4,8 @@
 
 const buttonClick = require("../button");
 
+//If you have some work you need to do repeatedly for many tests, you can use beforeEach and afterEach hooks.
+//In some cases, you only need to do setup once, at the beginning of a file. This can be especially bothersome when the setup is asynchronous, so you can't do it inline. Jest provides beforeAll and afterAll hooks to handle this situation.
 beforeEach(() => {
     // This way you don't need to load the entire HTML to tet just this part as Jest will on load and test the HTML part we specify below. This is a Mock DOM paragraph
     let fs = require("fs");
